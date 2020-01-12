@@ -54,7 +54,7 @@ obs 프로그램 : https://www.youtube.com/watch?v=mL0o-MUz7es
 
 
 
-4.앞으로 바램
+### 4.앞으로 바램
 
 1)다른건 다 못하더라도
 

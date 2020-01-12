@@ -44,7 +44,7 @@ react-board-express review 복습
 
 시간 나실때 화면녹화를 해주시면 제일 좋을텐데, 선생님이 녹화방법 아실런지 모르겠네요.
 
-obs 프로그램 : https://wotdud608.tistory.com/68
+obs 프로그램 : https://www.youtube.com/watch?v=mL0o-MUz7es
 
 
 

@@ -20,8 +20,7 @@ react-board-express review 복습
 
 4)브라우져에서 localhost:3000에서 getRequest 버튼 눌렀을때 데이터가 로딩  
 
-& getRequest 말고 localhost:3000실행과 동시에 데이터 로딩해줄 방법 아시나요?
-
+리스트에서 특정 글 선택시 Read는 따로 수업 안하신거 맞죠?
 
 
 ### 2.포스트맨 사용방법 좀 알려주세요. 

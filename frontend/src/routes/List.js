@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Read from './Read';
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -27,7 +28,7 @@ class List extends Component {
     });
   };
 
-  //버튼 클릭시 정보 받아옴
+  //로딩 정보 받아옴
   // handleClick = async () => {
   //   //test JSON: 이 주소로 넣으면 오류 없음
   //   //https://jsonplaceholder.typicode.com/todos/1
@@ -80,8 +81,8 @@ class List extends Component {
         {/* {boards[0].id} */}
         {boards.map(item => {
           return (
-            <ListItem key={item.id} title={item.title} content={item.content}>
-              <Link to={`/read/${item.id}`}>
+            <ListItem key={item.id}>
+              <Link to={`/read/:${item.id}`}>
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
               </Link>

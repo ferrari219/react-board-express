@@ -16,8 +16,11 @@ react-board-express review 복습
 
 2)back: localhost:4000 실행
 
-3)이렇게 실행시키고 난 다음에 getRequest 버튼 눌렀을때 데이터가 로딩 되는게 맞나요?  
-제 파일은 첨부해드린 이미지처럼 getRequest 버튼 눌렀을때 데이터가 안들어오고 사라져요.
+3)브라우져에서 localhost:3000/write 페이지 접속 해서 글쓰기
+
+4)브라우져에서 localhost:3000에서 getRequest 버튼 눌렀을때 데이터가 로딩  
+
+& getRequest 말고 localhost:3000실행과 동시에 데이터 로딩해줄 방법 아시나요?
 
 
 

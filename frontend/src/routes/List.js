@@ -71,13 +71,14 @@ class List extends Component {
         <div>
           {boards && (
             <textarea
-              name="getBoards"
+              name="getBoards2"
               onChange={handleChange}
               rows={7}
               value={JSON.stringify(boards, null, 2)}
             />
           )}
         </div>
+        {console.log(boards)}
         {/* {boards[0].id} */}
         {boards.map(item => {
           return (

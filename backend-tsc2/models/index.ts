@@ -1,11 +1,6 @@
 const Sequelize = require('sequelize');
 const config = require('../config/config');
-const db = {}; //DB를 넣을 빈 폴더
-// console.log(config.database);
-// console.log(config.dialect);
-
-// sequelize 내가 만든 MySQL
-// Sequelize 내가 받은 Sequelize 모듈 자체
+const db: any = {}; //DB를 넣을 빈 폴더
 const sequelize = new Sequelize(
   config.database,
   config.username,
@@ -18,10 +13,9 @@ const sequelize = new Sequelize(
 );
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+//생성할 DB테이블 연결
 const Board = require('./Board')(sequelize, Sequelize);
-const User = require('./User')(sequelize, Sequelize);
-// User.hasMany(Board, { as: 'BoardId' });
-db.User = User;
 db.Board = Board;
 
-module.exports = db;
+export = db;

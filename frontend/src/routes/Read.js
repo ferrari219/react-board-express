@@ -36,6 +36,22 @@ class Read extends Component {
         <p>{board.content}</p>
         <Button>
           <Link to="/">목록</Link>
+          <a
+            href="#"
+            onClick={() => {
+              alert('삭제');
+            }}
+          >
+            삭제
+          </a>
+          <a
+            href="#"
+            onClick={() => {
+              alert('수정');
+            }}
+          >
+            수정
+          </a>
         </Button>
       </Wrap>
     );
@@ -66,6 +82,9 @@ const Button = styled.div`
     border: 1px solid #ddd;
     color: #424242;
     font-size: 16px;
+  }
+  a + a {
+    margin-right: 5px;
   }
 `;
 

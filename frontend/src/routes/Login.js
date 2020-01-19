@@ -9,7 +9,7 @@ class Login extends Component {
         <InputArea>
           <p>
             <label>ID</label>
-            <input type="text" />
+            <input type="text" /> test
           </p>
           <p>
             <label>PW</label>

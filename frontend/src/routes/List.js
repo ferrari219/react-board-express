@@ -82,7 +82,7 @@ class List extends Component {
         {boards.map(item => {
           return (
             <ListItem key={item.id}>
-              <Link to={`/read/:${item.id}`}>
+              <Link to={`/read/${item.id}`}>
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
               </Link>

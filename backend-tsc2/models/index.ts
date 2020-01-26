@@ -16,6 +16,9 @@ db.Sequelize = Sequelize;
 
 //생성할 DB테이블 연결
 const Board = require('./Board')(sequelize, Sequelize);
+const User = require('./User')(sequelize, Sequelize);
 db.Board = Board;
+db.User = User;
 
+User.hasMany(Board, { as: 'author' });
 export = db;

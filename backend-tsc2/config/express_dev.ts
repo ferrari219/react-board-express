@@ -4,5 +4,6 @@ module.exports = {
   database: 'test',
   host: 'localhost',
   dialect: 'mysql',
-  operatorAliases: false
+  operatorAliases: false,
+  jwt_secretKey: 'asdlkfjwoijxcoijfwewk32hiuw'
 };

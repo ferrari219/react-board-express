@@ -6,6 +6,7 @@ react-board-express review
 ## 수업03
 
 backend: Login, Join 완료
+
 front: Login, Join 미완(쿠키값 받아오지 못함)
 
 

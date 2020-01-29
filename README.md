@@ -6,9 +6,7 @@ backend 게시판 완료
 
 ### 질문 
 
-1.윈도우10 포스트맨에서 post로 한글만 데이터 입력하면 등록 안되고 에러나는데 방법 있나요?
-
-2.sequelize.sync({ force: true }); 하면 DB데이터 초기화 되나요?
+1.sequelize.sync({ force: true }); 하면 DB데이터 초기화 되나요?
 
 
 

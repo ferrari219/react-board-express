@@ -3,7 +3,7 @@ const models = require('../models');
 const boardWrite = async (req, res, next) => {
   try {
     const { title, content } = req.body;
-    console.log(req.body);
+    console.log(title, content);
     const createBoard = await models.Board.create({
       title,
       content
@@ -58,10 +58,14 @@ const boardChange = async (req, res, next) => {
     const { title, content } = req.body;
     const ChangeBoard = await models.Board.update(
       {
-        title: title,
-        content: content
+        title,
+        content
       },
-      { where: { id } }
+      {
+        where: {
+          id
+        }
+      }
     );
     res.status(200).json({ title, content });
   } catch (e) {

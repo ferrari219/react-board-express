@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-const route = Router();
 const board = require('../controllers/board');
+const route = Router();
 
 // route.use('/', () => {
 //   console.log('/routes/board연결');

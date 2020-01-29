@@ -1,6 +1,12 @@
 # react-board-express
 
-복습 backend 게시판 완료
+### 복습
+
+backend 게시판 완료
+
+### 질문
+
+1.sequelize.sync({ force: true }); 하면 DB데이터 초기화 되나요?
 
 ## 수업03
 

@@ -1,0 +1,22 @@
+{
+  "name": "react-board-express",
+  "version": "1.0.0",
+  "description": "react-board-express review",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferrari219/react-board-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferrari219/react-board-express/issues"
+  },
+  "homepage": "https://github.com/ferrari219/react-board-express#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}

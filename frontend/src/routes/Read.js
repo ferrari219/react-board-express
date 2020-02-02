@@ -14,8 +14,9 @@ class Read extends Component {
     //test JSON: 이 주소로 넣으면 오류 없음
     //https://jsonplaceholder.typicode.com/todos/1
     try {
-      const id = 0; //test id
-      const response = await axios.get('http://localhost:4000/board');
+      // const id = 0; //test id
+      const { id } = this.props.match.params;
+      const response = await axios.get(`http://localhost:4000/board/${id}`);
       this.setState({
         // boards: 'test'
         board: response.data[id]
@@ -36,6 +37,22 @@ class Read extends Component {
         <p>{board.content}</p>
         <Button>
           <Link to="/">목록</Link>
+          <a
+            href="#"
+            onClick={() => {
+              alert('삭제');
+            }}
+          >
+            삭제
+          </a>
+          <a
+            href="#"
+            onClick={() => {
+              alert('수정');
+            }}
+          >
+            수정
+          </a>
         </Button>
       </Wrap>
     );
@@ -66,6 +83,9 @@ const Button = styled.div`
     border: 1px solid #ddd;
     color: #424242;
     font-size: 16px;
+  }
+  a + a {
+    margin-right: 5px;
   }
 `;
 

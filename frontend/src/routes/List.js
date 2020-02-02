@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Read from './Read';
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -71,18 +70,19 @@ class List extends Component {
         <div>
           {boards && (
             <textarea
-              name="getBoards"
+              name="getBoards2"
               onChange={handleChange}
               rows={7}
               value={JSON.stringify(boards, null, 2)}
             />
           )}
         </div>
+        {console.log(boards)}
         {/* {boards[0].id} */}
         {boards.map(item => {
           return (
             <ListItem key={item.id}>
-              <Link to={`/read/:${item.id}`}>
+              <Link to={`/read/${item.id}`}>
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
               </Link>

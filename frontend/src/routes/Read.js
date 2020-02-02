@@ -16,10 +16,13 @@ class Read extends Component {
     try {
       // const id = 0; //test id
       const { id } = this.props.match.params;
-      const response = await axios.get(`http://localhost:4000/board/${id}`);
+      console.log(id);
+      const response = await axios.get(`http://localhost:4000/board/${id}`, {
+        withCredentials: true
+      });
+      console.log(response.data);
       this.setState({
-        // boards: 'test'
-        board: response.data[id]
+        board: response.data
       });
     } catch (e) {
       console.log(e);
@@ -31,10 +34,12 @@ class Read extends Component {
   }
   render() {
     const { board } = this.state;
+    console.log(board);
     return (
       <Wrap>
         <h2>{board.title}</h2>
         <p>{board.content}</p>
+        <img src={board.imgUrl} />
         <Button>
           <Link to="/">목록</Link>
           <a

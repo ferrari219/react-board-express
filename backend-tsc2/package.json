@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --exec ts-node app.ts",
-    "prod": "cross-env NODE_ENV=production node ts-node app.ts",
+    "prod": "cross-env NODE_ENV=production ts-node app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

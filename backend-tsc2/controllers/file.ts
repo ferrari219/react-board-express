@@ -21,7 +21,7 @@ const upload = multer({
     bucket: config.AWS_S3_BUCKET_NAME,
     key: (req, file, cb) => {
       console.log(file);
-      cb(null, Date.now() + file.originalname); //use Date.now() for unique file keys
+      cb(null, 'asdf' + Date.now() + file.originalname); //use Date.now() for unique file keys
     }
   })
 });
@@ -29,7 +29,7 @@ const upload = multer({
 //use by upload form
 const fileUpload = (req, res, next) => {
   console.log(req.files);
-  res.send(req.files[0].location);
+  res.json({ url: req.files[0].location });
 };
 
 export = {

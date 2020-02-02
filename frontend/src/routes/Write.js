@@ -6,13 +6,16 @@ import styled from 'styled-components';
 class Write extends Component {
   state = {
     title: '',
-    content: ''
+    content: '',
+    selectedFile: '',
+    imgUrl: ''
   };
   postBoard = async () => {
-    const { title, content } = this.state;
+    const { title, content, imgUrl } = this.state;
     const post = await axios.post('http://localhost:4000/board', {
       title,
-      content
+      content,
+      imgUrl
     });
     console.log(post);
   };
@@ -21,6 +24,25 @@ class Write extends Component {
     this.setState({
       [name]: value
     });
+  };
+  handleFileInput(e) {
+    this.setState({
+      selectedFile: e.target.files[0]
+    });
+  }
+
+  handlePost = async () => {
+    console.log(this.state.selectedFile);
+    const formData = new FormData();
+    formData.append('img', this.state.selectedFile);
+    const getUrl = await axios.post(
+      'http://localhost:4000/file/upload',
+      formData
+    );
+    this.setState({
+      imgUrl: getUrl.data.url
+    });
+    console.log(getUrl.data.url);
   };
   render() {
     return (
@@ -42,6 +64,14 @@ class Write extends Component {
             value={this.state.content}
           />
         </p>
+        <input
+          type="file"
+          name="file"
+          onChange={e => this.handleFileInput(e)}
+        />
+        <button type="button" onClick={this.handlePost}>
+          이미지전송
+        </button>
         <Button>
           <button onClick={this.postBoard}>전송하기 </button>
           <Link to="/">목록</Link>

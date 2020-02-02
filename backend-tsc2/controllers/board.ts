@@ -30,11 +30,9 @@ const boardReadAll = async (req, res, next) => {
 };
 const boardReadOne = async (req, res, next) => {
   console.log('boardReadOne');
-  console.log(req.findUserId);
-  console.log(req.params.id);
   const { id } = req.params;
   const getBoards = await models.Board.findOne({ where: { id } });
-  console.log(getBoards);
+  // console.log(getBoards);
   res.status(200).json(getBoards);
 };
 

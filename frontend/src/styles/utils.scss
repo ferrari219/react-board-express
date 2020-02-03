@@ -1,0 +1,80 @@
+// variable
+$gd: 10px;
+$fs: 16px;
+
+//font '나눔스퀘어', 'NanumSquare',
+$font-stack: (
+  '-apple-system',
+  'BlinkMacSystemFont',
+  'Segoe UI',
+  'Roboto',
+  'Helvetica Neue',
+  'Arial',
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Open Sans',
+  '나눔스퀘어',
+  'NanumSquare',
+  '맑은 고딕',
+  '돋움',
+  Dotum,
+  'sans-serif'
+);
+
+//color
+$pc1: #ff4181; //point color1
+$pc2: #0185e7; //point color2
+$gc0: #000;
+$gc2: #212121;
+$gc4: #424242;
+$gc7: #787878;
+$gc9: #fff;
+
+//Heading
+
+//Common
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing:border-box * {
+    box-sizing: inherit;
+  }
+}
+a {
+  text-decoration: none;
+}
+.list {
+  padding: $fs * 0.5 $fs;
+  border-bottom: 1px solid #ddd;
+  a {
+    display: block;
+    padding: $fs 0;
+    h3 {
+      font-size: $fs * 1.5;
+      color: $gc4;
+    }
+    p {
+      font-size: $fs;
+      color: $gc7;
+    }
+  }
+}
+
+//Responsive
+// $breakpoints: (
+//   phone: 320px,
+//   tablet: 768px,
+//   pc: 1024px
+// );
+
+// body {
+//   @include media('>phone', '<=tablet') {
+//     background: $oc-gray-0;
+//   }
+//   @include media('>tablet', '<=pc') {
+//     background: $oc-gray-5;
+//   }
+// }

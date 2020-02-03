@@ -77,7 +77,7 @@ class List extends Component {
             />
           )}
         </div>
-        {/* {console.log(boards)} */}
+        {console.log(boards)}
         {/* {boards[0].id} */}
         {boards.map(item => {
           return (

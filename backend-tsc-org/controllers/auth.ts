@@ -15,6 +15,7 @@ type JWT_USER = {
 };
 
 const userCheck = async (req, res, next) => {
+  console.log(req.cookies);
   const authHeader = req.cookies[`Authorization`];
   console.log(authHeader);
   if (authHeader) {

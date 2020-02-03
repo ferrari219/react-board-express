@@ -1,10 +1,21 @@
 const models = require('../models');
 
+type boardWritePayload = {
+  title: string;
+  content: string;
+  imgUrl: string;
+};
 const boardWrite = async (req, res, next) => {
   try {
     const { title, content } = req.body;
     // console.log(`title: ${title}`);
-    const createBoard = await models.Board.create({ title, content });
+    const payload: boardWritePayload = {
+      title,
+      content,
+      imgUrl: req.body.imgUrl ? req.body.imgUrl : null
+    };
+
+    const createBoard = await models.Board.create(payload);
     res.status(200).json(createBoard);
   } catch (e) {
     next(e);
@@ -19,11 +30,9 @@ const boardReadAll = async (req, res, next) => {
 };
 const boardReadOne = async (req, res, next) => {
   console.log('boardReadOne');
-  console.log(req.findUserId);
-  console.log(req.params.id);
   const { id } = req.params;
   const getBoards = await models.Board.findOne({ where: { id } });
-  console.log(getBoards);
+  // console.log(getBoards);
   res.status(200).json(getBoards);
 };
 

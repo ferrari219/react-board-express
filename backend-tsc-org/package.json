@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --exec ts-node app.ts",
-    "prod": "cross-env NODE_ENV=production node ts-node app.ts",
+    "prod": "cross-env NODE_ENV=production ts-node app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.610.0",
     "bcrypt": "^3.0.7",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
@@ -19,6 +20,8 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.2",
     "sequelize": "^5.21.3",

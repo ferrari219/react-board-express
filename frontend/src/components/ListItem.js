@@ -8,13 +8,14 @@ export class ListItem extends Component {
     content: ''
   };
   render() {
+    const { title, content } = this.props;
     return (
       <div>
         <div>
           <div className="list">
             <a href="#">
-              <h3>title</h3>
-              <p>content</p>
+              <h3>{title}</h3>
+              <p>{content}</p>
             </a>
           </div>
         </div>

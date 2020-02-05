@@ -8,12 +8,12 @@ export class ListItem extends Component {
     content: ''
   };
   render() {
-    const { title, content } = this.props;
+    const { title, content, lnk } = this.props;
     return (
       <div>
         <div>
           <div className="list">
-            <a href="#">
+            <a href={lnk}>
               <h3>{title}</h3>
               <p>{content}</p>
             </a>

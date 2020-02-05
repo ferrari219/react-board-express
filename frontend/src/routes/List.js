@@ -9,24 +9,59 @@ export class List extends Component {
   state = {
     boards: []
   };
-  loadData = () => {
-    const response = axios.get('localhost:4000/board');
+  loadingData = async () => {
+    const response = await axios.get('http://localhost:4000/board');
+    // const response = {
+    //   data: [
+    //     {
+    //       id: 1,
+    //       title: 'title1',
+    //       content: 'content1'
+    //     },
+    //     {
+    //       id: 2,
+    //       title: 'title2',
+    //       content: 'content2'
+    //     },
+    //     {
+    //       id: 3,
+    //       title: 'title3',
+    //       content: 'content3'
+    //     }
+    //   ]
+    // };
     this.setState({
       boards: response.data
     });
   };
 
-  ComponentDidMount;
+  componentDidMount() {
+    const { loadingData } = this;
+    loadingData();
+  }
 
   render() {
+    const { boards } = this.state;
     return (
       <div>
         <div>
-          <ListItem title="타이틀1" content="컨텐츠" />
+          {boards &&
+            boards.map(item => (
+              <ListItem
+                key={item.id}
+                title={item.title}
+                content={item.content}
+                lnk={`/read/${item.id}`}
+              />
+            ))}
+          {/* <ListItem title="타이틀1" content="컨텐츠" />
           <ListItem title="타이틀2" content="컨텐츠" />
-          <ListItem title="타이틀3" content="컨텐츠" />
+          <ListItem title="타이틀3" content="컨텐츠" /> */}
         </div>
-        {JSON.stringify(this.state.boards)}
+        <div className="button">
+          <a href="#">글쓰기</a>
+        </div>
+        {/* {JSON.stringify(this.state.boards)} */}
       </div>
     );
   }

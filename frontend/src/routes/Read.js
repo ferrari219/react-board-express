@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/utils.scss';
+// import styled from 'styled-components';
 
 export class Read extends Component {
   state = {
@@ -34,14 +36,23 @@ export class Read extends Component {
     const { board } = this.state;
     return (
       <div>
-        <div>
+        <div className="read">
           <h2>{board.title}</h2>
           <p>{board.content}</p>
         </div>
         <div className="button">
-          <a href="#">수정</a>
+          <Link to="/modify">수정</Link>
+          <a
+            href="#"
+            onClick={() => {
+              alert('삭제');
+            }}
+          >
+            삭제
+          </a>
+          <Link to="/">목록</Link>
         </div>
-        2{JSON.stringify(board)}
+        {/* {JSON.stringify(board)} */}
       </div>
     );
   }

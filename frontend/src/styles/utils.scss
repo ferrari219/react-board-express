@@ -50,7 +50,7 @@ a {
 }
 .list {
   padding: $fs * 0.5 $fs;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   a {
     display: block;
     padding: $fs 0;
@@ -63,6 +63,51 @@ a {
       font-size: $fs;
       color: $gc7;
     }
+  }
+}
+.read {
+  h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  p {
+    min-height: 200px;
+    padding: 20px 0;
+  }
+}
+.write {
+  input {
+    height: $fs * 1.5;
+    border: 1px solid $gc7;
+  }
+  p + p {
+    margin-top: 5px;
+  }
+}
+.button {
+  margin-top: $fs * 1.5;
+  padding: $fs 0;
+  border-top: 1px solid #ccc;
+  a,
+  button {
+    display: inline-block;
+    padding: $fs * 0.5 $fs;
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-weight: 400;
+    color: $gc4;
+    font-size: $fs;
+    &.black {
+      background: $gc2;
+      color: $gc9;
+    }
+  }
+  a + a,
+  button + a,
+  a + button,
+  button + button {
+    margin-left: 5px;
   }
 }
 

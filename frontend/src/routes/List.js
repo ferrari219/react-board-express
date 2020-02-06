@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/utils.scss';
 
@@ -59,7 +60,9 @@ export class List extends Component {
           <ListItem title="타이틀3" content="컨텐츠" /> */}
         </div>
         <div className="button">
-          <a href="#">글쓰기</a>
+          <Link to="/write" className="black">
+            글쓰기
+          </Link>
         </div>
         {/* {JSON.stringify(this.state.boards)} */}
       </div>
